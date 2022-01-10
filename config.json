@@ -1,0 +1,29 @@
+{
+	"archive": {
+		"url": "http://localhost:8000/Server/",
+		"zip_file": "data_zip.zip",
+		"file": "data.sql",
+		"log_file": "log.txt", 
+		"expiring_time": 86400
+	},
+
+	"smb_client": {
+		"username": "username",
+		"password": "password",
+		"machine_name": "name",
+		"server_name": "pc-name",
+		"ip_adress": "ip_address",
+		"smb_share": "smb_server_name",
+		"save_duration": 86400
+	},
+
+	"mail": {
+		"sender_adress": "sender@gmail.com",
+		"password": "password",
+		"port": "465",
+		"smtp_server": "smtp.gmail.com",
+		"receiver_adress": "receiverg@gmail.com",
+		"send_mode": "on",
+		"attach_mode": "on"
+	}
+}
