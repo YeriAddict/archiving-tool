@@ -30,11 +30,25 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+This project is a simple archiving tool built with Python. This tool allows a user to do these successive actions:
 
+1. Download a zip file from a web server (HTTP)
+2. Extract that zip file
+3. Check whether its content is up to date and valid
+4. Compress it after validation into a tgz file
+5. Send the tgz file to a server (SMB/CIFS)
+6. (Optional) Send an email stating if operation succeeded or not
+A logfile stores useful information throughout the whole operations to check if everything works properly or not. It can be attached to the email if the user chooses to do so.
+
+Here is a drawing to better understand the whole process : 
+
+<img src="images/screen_one.png" alt="Logo" width="900" height="400">
 
 ### Built With
 
-* [Pylint](https://pypi.org/project/pylint/)
+* [pylint](https://pypi.org/project/pylint/)
+* [requests](https://pypi.org/project/requests/)
+* [pysmb](https://pysmb.readthedocs.io/en/latest/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
