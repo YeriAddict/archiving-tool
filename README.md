@@ -8,6 +8,7 @@
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
+        <li><a href="#more-details">More details</a></li>
       </ul>
     </li>
     <li>
@@ -38,6 +39,7 @@ This project is a simple archiving tool built with Python. This tool allows a us
 4. Compress it after validation into a tgz file
 5. Send the tgz file to a server (SMB/CIFS)
 6. (Optional) Send an email stating if operation succeeded or not
+
 A logfile stores useful information throughout the whole operations to check if everything works properly or not. It can be attached to the email if the user chooses to do so.
 
 Here is a drawing to better understand the whole process : 
@@ -49,6 +51,11 @@ Here is a drawing to better understand the whole process :
 * [pylint](https://pypi.org/project/pylint/)
 * [requests](https://pypi.org/project/requests/)
 * [pysmb](https://pysmb.readthedocs.io/en/latest/)
+
+### More details
+
+You can check the folder "Documents" for more details on how the code is written and how to actually use the tool. 
+This tool is mainly aimed at Windows workstations. Therefore, it may not work for MacOS or Linux users.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -68,7 +75,11 @@ Clone the repository with SSH or HTTPS
 
 ### Installation
 
-XXX
+You will need to install these external libraries using pip. 
+  ```sh
+  py -m pip install pysmb 
+  py -m pip install requests
+  ```
 
 <!-- USAGE EXAMPLES -->
 ## Usage
