@@ -45,7 +45,7 @@ A logfile stores useful information throughout the whole operations to check if 
 
 Here is a drawing to better understand the whole process : 
 
-<img src="images/screen_start.png" alt="Logo" width="900" height="400">
+<img src="images/screen_start.png" alt="Logo" width="800" height="300">
 
 ### Built With
 
@@ -92,7 +92,7 @@ You will need to complete these steps in order to successfully launch the tool. 
 
 To begin with, you will have to configure the config.json file cautiously. Here is a screenshot of what the file looks like : 
 
-<img src="images/screen_json.png" alt="Logo" width="900" height="400">
+<img src="images/screen_json.png" alt="Logo" width="300" height="400">
 
 The names of the json objects are conveniently named after the classes in the code. But all you must worry about as a user are the following elements. Changing the values in which “NO CHANGE” is specified is not advised:
 
@@ -139,30 +139,30 @@ Ensure that you have Network activated on your Windows workstation. It is normal
 
 a. Go to control panel and click on *Network and Internet*
 
-<img src="images/screen_network_one.png" alt="Logo" width="900" height="400">
+<img src="images/screen_network_one.png" alt="Logo" width="400" height="300">
 
 b. Go to *Network and Sharing Center*
 
-<img src="images/screen_network_two.png" alt="Logo" width="900" height="400">
+<img src="images/screen_network_two.png" alt="Logo" width="500" height="300">
 
 c. Finally in *Advanced sharing options*, check everything
 
-<img src="images/screen_network_three.png" alt="Logo" width="900" height="400">
+<img src="images/screen_network_three.png" alt="Logo" width="500" height="300">
 
 2. Folder creation
 
 You will then have to create a folder in the root of the code’s folder like this :
 
-<img src="images/screen_folder_one.png" alt="Logo" width="900" height="400">
+<img src="images/screen_folder_one.png" alt="Logo" width="300" height="400">
 
 It is mandatory to create that folder here for the code to work properly so do not place it anywhere else.
 Then, activate those settings by right clicking the folder to setup the SMB server :
 
-<img src="images/screen_folder_two.png" alt="Logo" width="900" height="400">
+<img src="images/screen_folder_two.png" alt="Logo" width="500" height="300">
 
 If everything went smoothly, you should now see this on your Windows explorer :
 
-<img src="images/screen_folder_three.png" alt="Logo" width="900" height="400">
+<img src="images/screen_folder_three.png" alt="Logo" width="300" height="400">
 
 The SMB share is now ready to use.
 
@@ -184,18 +184,18 @@ a. Go to Task Scheduler, right click “Archiving Tool” and Properties:
 
 b. Click on Actions and Modify
 
-<img src="images/screen_task_one.png" alt="Logo" width="900" height="400">
+<img src="images/screen_task_one.png" alt="Logo" width="250" height="300">
 
 c. Add the path to your project’s root folder inside this:
 
-<img src="images/screen_task_two.png" alt="Logo" width="900" height="400">
+<img src="images/screen_task_two.png" alt="Logo" width="250" height="300">
 
 Note that *server.py* will run indefinitely until the workstation is shut down. So, beware to click again on *start.bat* if you close your computer at some point else the script will run but fail with the operations. You do not need to modify the task which runs main.py whatsoever so just type “N” if prompted to.
 
 
 Everything is now ready and set to work properly. You can thus enjoy storing files with this Archiving Tool.
 
-<img src="images/screen_finale.png" alt="Logo" width="900" height="400">
+<img src="images/screen_finale.png" alt="Logo" width="250" height="300">
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
