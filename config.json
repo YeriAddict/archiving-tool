@@ -12,17 +12,17 @@
 		"password": "password",
 		"machine_name": "name",
 		"server_name": "pc-name",
-		"ip_adress": "ip_address",
+		"ip_address": "ip_address",
 		"smb_share": "smb_server_name",
 		"save_duration": 86400
 	},
 
 	"mail": {
-		"sender_adress": "sender@gmail.com",
+		"sender_address": "sender@gmail.com",
 		"password": "password",
 		"port": "465",
 		"smtp_server": "smtp.gmail.com",
-		"receiver_adress": "receiverg@gmail.com",
+		"receiver_address": "receiverg@gmail.com",
 		"send_mode": "on",
 		"attach_mode": "on"
 	}

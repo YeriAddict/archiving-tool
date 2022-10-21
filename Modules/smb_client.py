@@ -33,7 +33,7 @@ class SmbClient:
         self.password = smb_client["password"]
         self.machine_name = smb_client["machine_name"]
         self.server_name = smb_client["server_name"]
-        self.ip_adress = smb_client["ip_adress"]
+        self.ip_address = smb_client["ip_address"]
         self.smb_share = smb_client["smb_share"]
         self.save_duration = smb_client["save_duration"]
 
@@ -45,7 +45,7 @@ class SmbClient:
         """
         con = SMBConnection(self.username, self.password, self.machine_name,
         self.server_name, use_ntlm_v2 = True)
-        con.connect(self.ip_adress, 139)
+        con.connect(self.ip_address, 139)
         file = "/" + file_to_store
         con.storeFile(self.smb_share, file, data)
 

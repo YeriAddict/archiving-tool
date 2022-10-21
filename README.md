@@ -114,7 +114,7 @@ The names of the json objects are conveniently named after the classes in the co
   
 ➢ archive:  
   ▪ “sender_address”: An E-mail address for the expeditor (Note: Gmail is advised)  
-  ▪ “password”: Password for the adress above  
+  ▪ “password”: Password for the address above  
   ▪ “port”: NO CHANGE  
   ▪ “smtp_server”: NO CHANGE  
   ▪ “receiver_address”: An E-mail address for the receiver (Note: Gmail is advised)  

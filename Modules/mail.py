@@ -35,11 +35,11 @@ class Mail:
             data = json.load(conf)
             mail = data["mail"]
             archive = data["archive"]
-        self.sender_adress = mail["sender_adress"]
+        self.sender_address = mail["sender_address"]
         self.password = mail["password"]
         self.port = mail["port"]
         self.smtp_server = mail["smtp_server"]
-        self.receiver_adress = mail["receiver_adress"]
+        self.receiver_address = mail["receiver_address"]
         self.log_file = archive["log_file"]
 
     def send_email_ssl(self, body, subject):
@@ -51,25 +51,25 @@ class Mail:
         context = ssl.create_default_context()
         try:
             complete_message = MIMEMultipart()
-            complete_message["From"] = self.sender_adress
-            complete_message["To"] = self.receiver_adress
+            complete_message["From"] = self.sender_address
+            complete_message["To"] = self.receiver_address
             complete_message["Subject"] = subject
             complete_message.attach(MIMEText(body, "plain"))
             text = complete_message.as_string()
 
             with smtplib.SMTP_SSL(self.smtp_server, self.port, context=context) as server:
-                server.login(self.sender_adress, self.password)
-                server.sendmail(self.sender_adress, self.receiver_adress, text)
+                server.login(self.sender_address, self.password)
+                server.sendmail(self.sender_address, self.receiver_address, text)
             line = ("[" + DATE + " | " + TIME +  "]" + " [EMAIL]: Mail sent to "
-            + self.receiver_adress)
+            + self.receiver_address)
             print(line)
             add_to_log(self.log_file, line)
         except smtplib.SMTPSenderRefused:
-            line_one = "[" + DATE + " | " + TIME +  "]" + " [EMAIL]: Sender adress refused"
+            line_one = "[" + DATE + " | " + TIME +  "]" + " [EMAIL]: Sender address refused"
             print(line_one)
             add_to_log(self.log_file, line_one)
         except smtplib.SMTPRecipientsRefused:
-            line_two = "[" + DATE + " | " + TIME +  "]" + " [EMAIL]: Receiver adress refused"
+            line_two = "[" + DATE + " | " + TIME +  "]" + " [EMAIL]: Receiver address refused"
             print(line_two)
             add_to_log(self.log_file, line_two)
         except smtplib.SMTPConnectError:
@@ -92,8 +92,8 @@ class Mail:
         context = ssl.create_default_context()
         try:
             complete_message = MIMEMultipart()
-            complete_message["From"] = self.sender_adress
-            complete_message["To"] = self.receiver_adress
+            complete_message["From"] = self.sender_address
+            complete_message["To"] = self.receiver_address
             complete_message["Subject"] = subject
             complete_message.attach(MIMEText(body, "plain"))
 
@@ -109,18 +109,18 @@ class Mail:
             text = complete_message.as_string()
 
             with smtplib.SMTP_SSL(self.smtp_server, self.port, context=context) as server:
-                server.login(self.sender_adress, self.password)
-                server.sendmail(self.sender_adress, self.receiver_adress, text)
+                server.login(self.sender_address, self.password)
+                server.sendmail(self.sender_address, self.receiver_address, text)
             line = ("[" + DATE + " | " + TIME +  "]" + " [EMAIL]: Mail sent to "
-            + self.receiver_adress)
+            + self.receiver_address)
             print(line)
             add_to_log(self.log_file, line)
         except smtplib.SMTPSenderRefused:
-            line_one = "[" + DATE + " | " + TIME +  "]" + " [EMAIL]: Sender adress refused"
+            line_one = "[" + DATE + " | " + TIME +  "]" + " [EMAIL]: Sender address refused"
             print(line_one)
             add_to_log(self.log_file, line_one)
         except smtplib.SMTPRecipientsRefused:
-            line_two = "[" + DATE + " | " + TIME +  "]" + " [EMAIL]: Receiver adress refused"
+            line_two = "[" + DATE + " | " + TIME +  "]" + " [EMAIL]: Receiver address refused"
             print(line_two)
             add_to_log(self.log_file, line_two)
         except smtplib.SMTPConnectError:
