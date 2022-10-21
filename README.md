@@ -45,7 +45,7 @@ A logfile stores useful information throughout the whole operations to check if 
 
 Here is a drawing to better understand the whole process : 
 
-<img src="images/screen_one.png" alt="Logo" width="900" height="400">
+<img src="images/screen_start.png" alt="Logo" width="900" height="400">
 
 ### Built With
 
@@ -122,7 +122,7 @@ The names of the json objects are conveniently named after the classes in the co
   ▪ “attach_mode”: Put on or off depending on if you want to have logs attached in the mails  
 
 If you struggle finding how to fill "ip_address", follow these steps : 
-1. Type **ipconfig** inside a terminal window
+1. Type *ipconfig* inside a terminal window
 2. Get the correct IP address in front of IPv4
 
 Finally, for the "sender_address", you should use a Gmail address. Having a throwaway Gmail address for the sender is advised for security reasons because you will have to enter login credentials inside the config.json to start the script. You must activate this mode: “Allow less secure apps” to on in Gmail. It is essential if you wish to receive the E-mails from the sender address as a receiver. To find this mode, go to :
@@ -131,9 +131,71 @@ Finally, for the "sender_address", you should use a Gmail address. Having a thro
 
 ### B. How to create the SMB share server
 
-XXX
+To setup the SMB share server, follow these steps :
+
+1. Network activation
+
+Ensure that you have Network activated on your Windows workstation. It is normally activated by default. If not, follow these steps :
+
+a. Go to control panel and click on *Network and Internet*
+
+<img src="images/screen_network_one.png" alt="Logo" width="900" height="400">
+
+b. Go to *Network and Sharing Center*
+
+<img src="images/screen_network_two.png" alt="Logo" width="900" height="400">
+
+c. Finally in *Advanced sharing options*, check everything
+
+<img src="images/screen_network_three.png" alt="Logo" width="900" height="400">
+
+2. Folder creation
+
+You will then have to create a folder in the root of the code’s folder like this :
+
+<img src="images/screen_folder_one.png" alt="Logo" width="900" height="400">
+
+It is mandatory to create that folder here for the code to work properly so do not place it anywhere else.
+Then, activate those settings by right clicking the folder to setup the SMB server :
+
+<img src="images/screen_folder_two.png" alt="Logo" width="900" height="400">
+
+If everything went smoothly, you should now see this on your Windows explorer :
+
+<img src="images/screen_folder_three.png" alt="Logo" width="900" height="400">
+
+The SMB share is now ready to use.
 
 ### C. How to run the program periodically
+
+Everything should now be ready for the code to work. If you run *server.py* and *main.py* (in that order) on any IDE, the script will work. In our case, we want it to be automatic. To do so you need to follow these steps.
+
+1. Batch file
+
+You should see a start.bat file inside the folder.
+You must change the path to match with your folder’s path inside the batch file. It is also possible for you to change the frequency at which main.py is executed. For more information on how to do so, you can go to this link [Schtasks](https://learn.microsoft.com/en-us/previous-versions/orphan-topics/ws.10/cc772785(v=ws.10)?redirectedfrom=MSDN).
+When everything is changed, you can now run *start.bat* by double clicking it.
+
+2. Windows Task Scheduler
+
+You now must add path for the script to work in Task Scheduler.
+
+a. Go to Task Scheduler, right click “Archiving Tool” and Properties:
+
+b. Click on Actions and Modify
+
+<img src="images/screen_task_one.png" alt="Logo" width="900" height="400">
+
+c. Add the path to your project’s root folder inside this:
+
+<img src="images/screen_task_two.png" alt="Logo" width="900" height="400">
+
+Note that *server.py* will run indefinitely until the workstation is shut down. So, beware to click again on *start.bat* if you close your computer at some point else the script will run but fail with the operations. You do not need to modify the task which runs main.py whatsoever so just type “N” if prompted to.
+
+
+Everything is now ready and set to work properly. You can thus enjoy storing files with this Archiving Tool.
+
+<img src="images/screen_finale.png" alt="Logo" width="900" height="400">
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
