@@ -1,4 +1,4 @@
-# ArchivingTool - LEANG Denis
+# Archiving Tool
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -203,7 +203,5 @@ Everything is now ready and set to work properly. You can thus enjoy storing fil
 ## Contact
 
 LEANG Denis - denis.leang@telecom-st-etienne.fr 
-
-Link: [https://github.com/YeriAddict/ArchivingTool](https://github.com/YeriAddict/ArchivingTool)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
